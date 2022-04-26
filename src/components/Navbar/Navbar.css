@@ -1,8 +1,12 @@
+.nav {
+  grid-area: Navbar;
+  width: 100%;
+}
 .Navbar {
   background-color: var(--primary-color);
   color: var(--logo-color);
   display: flex;
-  height: 4.5rem;
+  height: fit-content;
   align-items: center;
   box-shadow: var(--logo-color) 0px 0px 10px 3px;
 }
