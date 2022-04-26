@@ -1,0 +1,9 @@
+.page-layout {
+  display: flex;
+  width: 100%;
+}
+
+.menu {
+  flex: 8;
+  overflow-x: hidden;
+}
