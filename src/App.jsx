@@ -1,28 +1,30 @@
 import { Route, Routes } from "react-router-dom";
+import { Navbar } from "./components";
 import "./App.css";
-import {
-  History,
-  Home,
-  LikedVideos,
-  Login,
-  Playlist,
-  Signup,
-  Watchlater,
-} from "./pages";
+import Home from "./pages/Home/Home";
+import Playlist from "./pages/Playlist/Playlist";
+import LikedVideos from "./pages/LikedVideos/LikedVideos";
+import Watchlater from "./pages/WatchLater/Watchlater";
+import History from "./pages/History/History";
+import Login from "./pages/auth/Login";
+import Signup from "./pages/auth/Signup";
+import Layout from "./layout/Layout";
 
 function App() {
   return (
     <div className="App">
-      <Home />
-      <Routes>
-        <Route to="/" element={<Home />} />
-        <Route to="/playlist" element={<Playlist />} />
-        <Route to="/likedvideos" element={<LikedVideos />} />
-        <Route to="/watch-later" element={<Watchlater />} />
-        <Route to="/login" element={<Login />} />
-        <Route to="/signup" element={<Signup />} />
-        <Route to="/history" element={<History />} />
-      </Routes>
+      <Navbar />
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/playlist" element={<Playlist />} />
+          <Route path="/liked-videos" element={<LikedVideos />} />
+          <Route path="/watchlater" element={<Watchlater />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/history" element={<History />} />
+        </Routes>
+      </Layout>
     </div>
   );
 }
