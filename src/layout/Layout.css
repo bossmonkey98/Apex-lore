@@ -1,0 +1,11 @@
+.page-layout {
+  display: flex;
+  width: 100%;
+}
+
+.menu {
+  flex: 8;
+  position: absolute;
+  left: 10rem;
+  top: 5.5rem;
+}

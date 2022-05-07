@@ -1,0 +1,38 @@
+.home {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chips {
+  margin: 1rem;
+}
+
+.chip-btn {
+  cursor: pointer;
+  color: var(--logo-color);
+  width: fit-content;
+  padding: 8px 1rem;
+  margin: 8px;
+  border-radius: 4rem;
+  background-color: var(--CTA-hover-bgc);
+  border: 0.1px solid var(--CTA-bgc);
+}
+
+.chip-btn:hover {
+  background-color: var(--CTA-bgc);
+  transform: scale(1.05);
+}
+
+.chip-btn-visited {
+  cursor: pointer;
+  color: var(--logo-color);
+  width: fit-content;
+  padding: 8px 1rem;
+  margin: 8px;
+  border-radius: 4rem;
+  background-color: var(--CTA-bgc);
+  border: none;
+  transform: scale(1.1);
+}
