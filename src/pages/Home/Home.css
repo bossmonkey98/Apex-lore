@@ -15,7 +15,7 @@
   width: fit-content;
   padding: 8px 1rem;
   margin: 8px;
-  border-radius: 20px;
+  border-radius: 4rem;
   background-color: var(--CTA-hover-bgc);
   border: 0.1px solid var(--CTA-bgc);
 }
@@ -31,8 +31,8 @@
   width: fit-content;
   padding: 8px 1rem;
   margin: 8px;
-  border-radius: 20px;
+  border-radius: 4rem;
   background-color: var(--CTA-bgc);
   border: none;
-  transform: scale(1.05);
+  transform: scale(1.1);
 }

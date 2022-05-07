@@ -3,12 +3,10 @@ import { Sidebar } from "../components";
 import "./Layout.css";
 const Layout = ({ children }) => {
   return (
-    <>
-      <div className="page-layout">
-        <Sidebar />
-        <main className="menu">{children}</main>
-      </div>
-    </>
+    <div className="page-layout">
+      <Sidebar />
+      <main className="menu">{children}</main>
+    </div>
   );
 };
 

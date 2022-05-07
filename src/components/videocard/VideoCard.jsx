@@ -12,7 +12,11 @@ const VideoCard = ({ videos }) => {
         onMouseEnter={() => setBool(true)}
         onMouseLeave={() => setBool(false)}
       >
-        <img className="vertical-card-img" src={videos.thumbnail} alt="" />
+        <img
+          className="vertical-card-img"
+          src={videos.thumbnail}
+          alt="thumbnail"
+        />
         {bool && (
           <div className="play-btn">
             <div className="play-btn-bg">

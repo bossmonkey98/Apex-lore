@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Loader, VideoCard } from "../../components";
 import { useVideo } from "../../Context/video-context";
 import { filterByCatagory } from "../../utils";
-
 import "./Home.css";
 
 const Home = () => {

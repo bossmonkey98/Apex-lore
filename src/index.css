@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box; */
 }
 
 :root {
@@ -12,10 +11,10 @@
   --CTA-hover-bgc: #0b0000cc;
   --card-bgc: #06404392;
   --bgc: rgba(0, 0, 0, 0.88);
+  --z-value: 9999;
 }
 
 body {
-  position: relative;
   background-color: var(--bgc);
   color: var(--secondary-color);
   scroll-behavior: smooth;

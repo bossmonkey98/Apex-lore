@@ -12,10 +12,6 @@
   background-color: var(--primary-color);
 }
 
-.icon {
-  font-size: 2rem !important;
-}
-
 .icon-container {
   text-decoration: none;
   height: 6rem;
@@ -28,7 +24,7 @@
 }
 
 .icon-container:hover {
-  background-color: var(--CTA-hover-bgc);
+  background-color: var(--CTA-bgc);
 }
 
 .link {
@@ -37,5 +33,5 @@
 }
 
 .active {
-  background-color: var(--CTA-hover-bgc);
+  background-color: var(--CTA-bgc);
 }

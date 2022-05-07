@@ -2,7 +2,7 @@
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 9999;
+  z-index: var(--z-value);
 }
 .Navbar {
   background-color: var(--primary-color);
