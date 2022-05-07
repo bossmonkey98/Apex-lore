@@ -5,15 +5,19 @@
 }
 
 :root {
-  --primary-color: #051617;
-  --secondary-color: white;
+  --primary-color: #05161792;
+  --secondary-color: #baf8e4;
   --logo-color: #baf8e4;
   --CTA-bgc: #13808c;
-  --CTA-hover-bgc: #1051589a;
+  --CTA-hover-bgc: #0b0000cc;
+  --card-bgc: #06404392;
+  --bgc: rgba(0, 0, 0, 0.88);
 }
 
 body {
-  background-color: black;
+  position: relative;
+  background-color: var(--bgc);
   color: var(--secondary-color);
   scroll-behavior: smooth;
+  font-family: "Roboto Mono", monospace;
 }
