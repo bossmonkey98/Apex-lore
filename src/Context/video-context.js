@@ -19,7 +19,6 @@ const VideoProvider = ({ children }) => {
       }, 3000),
     []
   );
-  console.log(video);
   return (
     <VideoContext.Provider value={{ video }}>{children}</VideoContext.Provider>
   );
