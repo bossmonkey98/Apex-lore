@@ -8,6 +8,7 @@ import History from "./pages/History/History";
 import Login from "./pages/auth/Login";
 import Signup from "./pages/auth/Signup";
 import Layout from "./layout/Layout";
+import MockmanEs from "mockman-js";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/history" element={<History />} />
+          <Route path="/mockman" element={<MockmanEs/>}/>
         </Routes>
       </Layout>
     </div>
