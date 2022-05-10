@@ -57,6 +57,7 @@
   outline: none;
   border: none;
   width: 100%;
+  border-radius: 0px !important;
 }
 
 .auth {
@@ -69,7 +70,7 @@
 .navbtn,
 .btn {
   cursor: pointer;
-  width: 8em;
+  width: 8rem;
   height: 2rem;
   margin: 0 3rem;
   border: none;
@@ -80,9 +81,11 @@
 }
 
 .navbtn:hover,
-.btn:hover {
+.btn:hover,
+.sign-btn:hover {
   background-color: var(--CTA-hover-bgc);
   border: 1px solid var(--logo-color);
   transform: scale(1.05);
   transition: 0.11s ease-in-out;
+  color: var(--secondary-color);
 }
