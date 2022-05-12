@@ -10,7 +10,7 @@ export const videos = [
     creator: "Respawn Entertainment: Apex Legends",
     views: "100 views",
     publishedon: "03/03/2019 23:31:30",
-    description:
+    desc:
       "When a monstrous beast attacks Storm Point, new Legend Newcastle leaps into the fray to protect and inspire his fellow Legends: because that’s what heroes are for. ",
     thumbnail: "https://i.postimg.cc/KvyQLNLf/maxresdefault.jpg",
     link: "https://youtube.com/embed/cheYIVEtVQ4",
@@ -24,7 +24,7 @@ export const videos = [
     creator: "Respawn Entertainment: Apex Legends",
     views: "100 views",
     publishedon: "03/03/2020 23:31:30",
-    description:
+    desc:
       "Mad Maggie might not be the hero the Legends want on their squad, but she might just be the villain they need. See if you can control the madness when Apex Legends: Defiance launches on February 8!",
     thumbnail: "https://i.postimg.cc/jjpK4mRC/maxresdefault.jpg",
     link: "https://youtube.com/embed/mUNYh_L250M",
@@ -38,7 +38,7 @@ export const videos = [
     creator: "Respawn Entertainment: Apex Legends",
     views: "100 views",
     publishedon: "03/03/2021 23:31:30",
-    description:
+    desc:
       "The Legends are taking a vacation and they’re ready for some fun in the sun...or at least, they think they are. Plan your getaway when Apex Legends: Escape launches November 2.",
     thumbnail: "https://i.postimg.cc/rpB0RfbN/maxresdefault.jpg",
     link: "https://youtube.com/embed/1R559DWBYbU",
@@ -52,7 +52,7 @@ export const videos = [
     creator: "Respawn Entertainment: Apex Legends",
     views: "100 views",
     publishedon: "03/03/2022 23:31:30",
-    description:
+    desc:
       "There’s nowhere to hide this season, Legends. Ready to find out if you’re predator or prey? Discover your true nature when Apex Legends – Legacy launches May 4!",
     thumbnail: "https://i.postimg.cc/qBnYKgts/maxresdefault.webp",
     link: "https://youtube.com/embed/oshvcDjEKZc",
@@ -66,7 +66,7 @@ export const videos = [
     creator: "Respawn Entertainment: Apex Legends",
     views: "100 views",
     publishedon: "03/03/2019 23:31:30",
-    description:
+    desc:
       "Change is constant in the Apex Games; are you watching closely? Pay attention or pay the price when Apex Legends: Emergence launches August 3.",
     thumbnail: "https://i.postimg.cc/BQdngm48/maxresdefault.webp",
     link: "https://youtube.com/embed/uQBKoZIYNrs",
@@ -80,7 +80,7 @@ export const videos = [
     creator: "Respawn Entertainment: Apex Legends",
     views: "100 views",
     publishedon: "03/03/2020 23:31:30",
-    description:
+    desc:
       "Revenant used to be human. He was the greatest hitman the Mercenary Syndicate ever had. But when his programming eventually failed, he saw what Hammond Robotics had turned him into: a walking nightmare of steel and vestigial flesh. The return of Hammond Robotics to the Outlands ",
     thumbnail: "https://i.postimg.cc/sxL7K5gV/maxresdefault.webp",
     link: "https://youtube.com/embed/QzfsGxrCD4o",
@@ -94,7 +94,7 @@ export const videos = [
     creator: "Respawn Entertainment: Apex Legends",
     views: "100 views",
     publishedon: "03/03/2021 23:31:30",
-    description:
+    desc:
       "It’s time for Mad Maggie to face justice for her crimes. But when you can’t be innocent and you won’t be guilty, what fate lies in store?",
     thumbnail: "https://i.postimg.cc/Vv0dfpz8/maxresdefault.jpg",
     link: "https://youtube.com/embed/JZPbJ6VKs2E",
@@ -108,7 +108,7 @@ export const videos = [
     creator: "Respawn Entertainment: Apex Legends",
     views: "100 views",
     publishedon: "03/03/2022 23:31:30",
-    description:
+    desc:
       "Some friends support your dreams, others have trouble letting go. Journey to Salvo and see if Fuse makes it to the Apex Games in one piece.",
     thumbnail: "https://i.postimg.cc/P5WKfFqY/maxresdefault.webp",
     link: "https://youtube.com/embed/NKOVl6F8bjA",
@@ -122,7 +122,7 @@ export const videos = [
     creator: "Respawn Entertainment: Apex Legends",
     views: "100 views",
     publishedon: "03/03/2019 23:31:30",
-    description:
+    desc:
       "Torn between her brother and the only cause she iss ever known, Bangalore has difficult decisions to make - and hard consequences to face - after the Battle of Gridiron.",
     thumbnail: "https://i.postimg.cc/Jhtq37qc/maxresdefault.jpg",
     link: "https://youtube.com/embed/JRRJQp2Bdwo",
@@ -136,7 +136,7 @@ export const videos = [
     creator: "Respawn Entertainment: Apex Legends",
     views: "100 views",
     publishedon: "03/03/2019 23:31:30",
-    description:
+    desc:
       "Ash’s problems are all in her head...but that is the most dangerous place they could be. Who is Ash, and who is Leigh?",
     thumbnail: "https://i.postimg.cc/qqY0Rvjb/maxresdefault.jpg",
     link: "https://youtube.com/embed/RY6j8RzpI5U",
@@ -150,7 +150,7 @@ export const videos = [
     creator: "Respawn Entertainment: Apex Legends",
     views: "100 views",
     publishedon: "03/03/2020 23:31:30",
-    description:
+    desc:
       "Valkyrie's been pulling smuggling jobs for years, but she didn't take this one for the money. Still, someone's got to pay...",
     thumbnail: "https://i.postimg.cc/Z5DTsj8t/maxresdefault.webp",
     link: "https://youtube.com/embed/FTk9VD2nPuw",
@@ -164,7 +164,7 @@ export const videos = [
     creator: "Respawn Entertainment: Apex Legends",
     views: "100 views",
     publishedon: "03/03/2021 23:31:30",
-    description:
+    desc:
       "Buy the Defiance Battle Pass and battle through Daily and Weekly Challenges to earn unique rewards like Legendary sets for Seer and Loba, Epic sets for Ash, Crypto and Lifeline, reactive skins for the Hemlok and more! Or buy the Battle Pass Bundle to instantly unlock the first 25 levels and be the last one standing: in style!",
     thumbnail: "https://i.postimg.cc/8C8YC6Df/maxresdefault.jpg",
     link: "https://youtube.com/embed/gZVpiWUctLo",
@@ -178,7 +178,7 @@ export const videos = [
     creator: "Respawn Entertainment: Apex Legends",
     views: "100 views",
     publishedon: "03/03/2022 23:31:30",
-    description:
+    desc:
       "Buy the Escape Battle Pass and battle through Daily and Weekly Challenges to earn cosmetic sets for Mirage, Gibraltar, Wraith, Loba and Revenant, as well two Reactive Prowlers and dozens of other unique rewards!",
     thumbnail: "https://i.postimg.cc/3N71MXXY/maxresdefault.webp",
     link: "https://youtube.com/embed/H_L6amOLQcg",
@@ -192,7 +192,7 @@ export const videos = [
     creator: "Respawn Entertainment: Apex Legends",
     views: "100 views",
     publishedon: "03/03/2019 23:31:30",
-    description:
+    desc:
       "Buy the Battle Pass and battle through Daily and Weekly Challenges to earn unique rewards like cosmetic sets for Seer, Valkyrie, and Horizon, XP Boosts, music packs and more!",
     thumbnail: "https://i.postimg.cc/26BhS2dn/maxresdefault.jpg",
     link: "https://youtube.com/embed/YVWGEacpe2k",
@@ -206,7 +206,7 @@ export const videos = [
     creator: "Respawn Entertainment: Apex Legends",
     views: "100 views",
     publishedon: "03/03/2019 23:31:30",
-    description:
+    desc:
       "Grab the Battle Pass and complete challenges to unlock Legendary items like Built for Speed Pathfinder, Road Warrior Bloodhound, and the Hypersonic reactive G7",
     thumbnail: "https://i.postimg.cc/xTFf6nVT/maxresdefault.webp",
     link: "https://youtube.com/embed/WS18WGCUSng",
@@ -220,7 +220,7 @@ export const videos = [
     creator: "Respawn Entertainment: Apex Legends",
     views: "100 views",
     publishedon: "03/03/2019 23:31:30",
-    description: "Check out the launch trailer for Titanfall.",
+    desc: "Check out the launch trailer for Titanfall.",
     thumbnail: "https://i.postimg.cc/tgc4rx3X/sddefault1-2.jpg",
     link: "https://www.youtube.com/embed/3FPtT4C870c",
     avatar:
@@ -233,7 +233,7 @@ export const videos = [
     creator: "Respawn Entertainment: Apex Legends",
     views: "100 views",
     publishedon: "03/03/2019 23:31:30",
-    description:
+    desc:
       "Watch the absolutely stunning Titanfall Frontier CGI trailer. It'll blow you away.",
     thumbnail: "https://i.postimg.cc/FKkVYrNf/maxresdefault.webp",
     link: "https://youtube.com/embed/N1vqjJRcCzg",
@@ -247,7 +247,7 @@ export const videos = [
     creator: "Electronics Arts: Respawn Entertainment",
     views: "100 views",
     publishedon: "03/03/2019 23:31:30",
-    description:
+    desc:
       "May 2020 marks the 10 year anniversary of Respawn Entertainment. Celebrate the legacy of the studio through the years, from their first title, Titanfall, in 2014 to the launch of Star Wars Jedi: Fallen Order in 2019 and beyond to Apex Legends’ continued live service content. The video also includes a small glimpse into what Respawn has coming next with the launch Medal of Honor: Above and Beyond (VR) later this year.",
     thumbnail: "https://i.postimg.cc/DZZFrMpb/maxresdefault.webp",
     link: "https://youtube.com/embed/hvECKXrAxPM",
