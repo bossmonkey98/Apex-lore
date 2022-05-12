@@ -1,27 +1,16 @@
 .video-container{
     padding-top:2rem;
     position: absolute;
-    width:89vw;
-    height:max-content;
+    width:100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-@media screen and (max-width: 1000px) {
-    .video-container{
-        width:80vw;
-        height: max-content;
-    }
-    .video{
-        width: 79vw !important;
-        height: 60vh;
-    }
-}
 
 .video{
-    width: 88vw;
-    height: 90vh;
+    width:100%;
+    height:80vh;
     padding: 1.5rem 0;
 }
 
@@ -53,7 +42,7 @@
   }
   
 .date-viewss {
-    padding: 1rem;
+    flex: 1;
     height: fit-content;
     width: 40%;
     display: flex;
@@ -63,7 +52,6 @@
   }
 
   .video-creatorr {
-      flex: 2;
     margin: 1rem 0;
     display: flex;
     align-items: center;
@@ -91,17 +79,16 @@
       align-items: center;
   }
 
-  .desc{
-      margin: 1rem;
-  }
-
   .icons{
       cursor: pointer;
       flex:1;
       display: flex;
       align-items: center;
-      margin-left: 1rem;
-      column-gap: 1rem;
+      justify-content: flex-end;
+  }
+
+  .icon{
+      margin: 10px;
   }
 
   .icon:hover{

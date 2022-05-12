@@ -1,5 +1,15 @@
+import './History.css'
+import { VideoCard } from "../../components/videocard/VideoCard";
+import { useHistory } from "../../Context/History-context";
+import { useAuth } from '../../Context/AuthContext';
+
 const History = () => {
-  return <div>History</div>;
+  const {user} = useAuth()
+  const {history , RemoveFromHistory ,clearHistory} = useHistory()
+  return <div className="liked-vids" id="history">
+    {history.length === 0?<>No history found</>:history.map((videos)=><VideoCard key = {videos.id} videos={videos}/>)}
+  <button className="clr-btn" onClick={()=>clearHistory(user)}>Clear History</button>
+  </div>;
 };
 
 export default History;

@@ -23,14 +23,13 @@ const Video = () => {
   return (
     <div className='video-page'>
       {singleVideo?<>
-      <iframe src={singleVideo.link} frameborder="0" className='video'></iframe>
+      <iframe src={singleVideo.link} frameBorder="0" className='video'></iframe>
       <div className='video-data'>
                 <h1 style={{margin:"1rem"}}>{singleVideo.title}</h1>
-                <div className='vid-data'>
-
+      <div className='vid-data'>
         <div className="video-creatorr">
           <div className="xs-img-avatarr">
-            <img src={singleVideo.avatar} alt="" className="avatar-img4" />
+            <img src={singleVideo.avatar} alt="avatar" className="avatar-img4" />
           </div>
           <div className="creator-namee">{singleVideo.creator}</div>
         </div>
@@ -54,9 +53,9 @@ const Video = () => {
           <WatchLater className='icon' fontSize='large'/>
           </div>
           </div>
-          <div className='desc'>
+            <p className="desc">
             Description : {singleVideo.desc}
-          </div>
+            </p >
         </div></>:<Loader/>}
     </div>
   )
