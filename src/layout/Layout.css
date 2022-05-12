@@ -8,4 +8,5 @@
   position: absolute;
   left: 10rem;
   top: 5.5rem;
+  min-height: fit-content;
 }
