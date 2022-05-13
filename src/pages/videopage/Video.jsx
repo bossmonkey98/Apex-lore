@@ -4,9 +4,10 @@ import { useVideo } from '../../Context/video-context';
 import {Loader} from '../../components/loader/Loader';
 import { timeSince ,toTimestamp } from '../../utils';
 import "./Video.css"
-import {PlaylistAdd, ThumbDown, ThumbUp, ThumbUpOutlined, WatchLater } from '@material-ui/icons';
+import { PlaylistAdd, ThumbDown, ThumbUp, ThumbUpOutlined, WatchLater } from '@material-ui/icons';
 import { useLikedVideos } from '../../Context/LikedVideosContext';
 import { useAuth } from '../../Context/AuthContext';
+import { useWatchLater } from '../../Context/watchlater-context';
 
 function findVideo(video , id){
     if(video)
@@ -20,6 +21,7 @@ const Video = () => {
     const {user} = useAuth()
     const navigator = useNavigate()
     const {LikedVideos,AddLikedVideos,RemoveLikedVideos} = useLikedVideos()
+    const {watchlater,AddTowatchlater} = useWatchLater()
   return (
     <div className='video-page'>
       {singleVideo?<>
@@ -50,7 +52,13 @@ const Video = () => {
           }}/>}
           <ThumbDown  className='icon' fontSize='large'/>
           <PlaylistAdd className='icon' fontSize='large'/>
-          <WatchLater className='icon' fontSize='large'/>
+          <WatchLater className='icon' fontSize='large' onClick={()=>{
+            if(watchlater.find((vid)=>vid._id === singleVideo._id)){
+              alert("video already found in watch later")
+            }
+            else
+            AddTowatchlater(singleVideo,user)
+          }}/>
           </div>
           </div>
             <p className="desc">
