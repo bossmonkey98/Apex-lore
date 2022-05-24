@@ -1,5 +1,11 @@
+import { PlaylistCard } from "../../components/playlistCard/PlaylistCard";
+import { usePlaylist } from "../../Context/playlist-context";
+
 const Playlist = () => {
-  return <div>Playlist</div>;
+  const {playlist ,newPlaylist,removePlaylist,getSpeciPlaylist,addToPlaylist,removeFromPlaylist} = usePlaylist();
+  return <div className="playlist-container">
+    {playlist?<PlaylistCard key={playlist._id}/>:<>No playlist found</>}
+  </div>;
 };
 
 export default Playlist;

@@ -1,0 +1,29 @@
+.file-wrap{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#file{
+    font-size: 5rem;
+}
+
+.playlist-file{
+    width:10rem;
+    width: fit-content;
+    font-size: larger;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem;
+    overflow:hidden;
+    text-decoration: none;
+    color: var(--logo-color);
+}
+
+.playlist-file:hover{
+    transform: scale(1.1);
+    transition: 100ms ease-in-out;
+    color: var(--CTA-bgc);
+}
