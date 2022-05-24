@@ -5,12 +5,14 @@ import { PlayArrow } from "@material-ui/icons";
 import {Link, useNavigate} from 'react-router-dom'
 import { useAuth } from "../../Context/AuthContext";
 import { useHistory } from "../../Context/History-context";
+import { useWatchLater } from "../../Context/watchlater-context";
 
 const VideoCard = ({ videos }) => {
   const {user} = useAuth()
   const [bool, setBool] = useState(false);
   const navigator = useNavigate()
   const {history ,AddToHistory, RemoveFromHistory} = useHistory()
+  const {watchlater,AddTowatchlater,RemoveFromwatchlater} = useWatchLater()
   return (
     <div className="vertical-card">
       <div
@@ -58,6 +60,18 @@ const VideoCard = ({ videos }) => {
           </div>
           <div className="creator-name">{videos.creator}</div>
         </div>
+        { watchlater.find((vid)=>vid._id === videos._id)?
+        <button className="btn" onClick={()=>RemoveFromwatchlater(videos._id,user)}>Remove from watchlater</button>
+        :<button className="btn" onClick={()=>{
+          if(user.isUserLoggedIn){
+            AddTowatchlater(videos,user)
+          }
+          else{
+            alert("Please login to continue")
+            navigator("/login")
+          }
+        }}>Add to watchlater</button>}
+        <button className="btn">Add to Playlist</button>
       </div>
     </div>
   );

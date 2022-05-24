@@ -1,5 +1,5 @@
 .vertical-card {
-  min-width: 320px;
+  width: 320px;
   height: fit-content;
   overflow: hidden;
   background-color: var(--card-bgc);
