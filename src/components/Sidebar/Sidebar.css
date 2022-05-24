@@ -1,5 +1,5 @@
 .sidebar {
-  position: fixed;
+  position:fixed;
   left: 0;
   top: 5.3rem;
   box-shadow: var(--logo-color) 0px 0px 10px 0px;

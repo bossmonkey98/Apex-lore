@@ -14,9 +14,9 @@ const VideoProvider = ({ children }) => {
   };
   useEffect(
     () =>
-      setTimeout(() => {
+      {setTimeout(() => {
         fetchdata();
-      }, 3000),
+      }, 3000)},
     []
   );
   return (

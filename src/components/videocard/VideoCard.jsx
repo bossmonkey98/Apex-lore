@@ -6,6 +6,8 @@ import {Link, useNavigate} from 'react-router-dom'
 import { useAuth } from "../../Context/AuthContext";
 import { useHistory } from "../../Context/History-context";
 import { useWatchLater } from "../../Context/watchlater-context";
+import Playlistmodal from "../playlistmodal/Playlistmodal";
+import { usePlaylist } from "../../Context/playlist-context";
 
 const VideoCard = ({ videos }) => {
   const {user} = useAuth()
@@ -13,6 +15,9 @@ const VideoCard = ({ videos }) => {
   const navigator = useNavigate()
   const {history ,AddToHistory, RemoveFromHistory} = useHistory()
   const {watchlater,AddTowatchlater,RemoveFromwatchlater} = useWatchLater()
+  const {playlist ,newPlaylist,removePlaylist,getSpeciPlaylist,addToPlaylist,removeFromPlaylist} =usePlaylist()
+  const [showModal ,setShowModal] = useState(false)
+  const [playlistVid ,setPlaylistVid] =useState()
   return (
     <div className="vertical-card">
       <div
@@ -71,7 +76,8 @@ const VideoCard = ({ videos }) => {
             navigator("/login")
           }
         }}>Add to watchlater</button>}
-        <button className="btn">Add to Playlist</button>
+        <button className="btn" onClick={()=>{setShowModal(true);setPlaylistVid(videos)}}>Add to Playlist</button>
+        {showModal && <Playlistmodal   functions ={[showModal ,setShowModal ,playlistVid ,setPlaylistVid]}/>}
       </div>
     </div>
   );
