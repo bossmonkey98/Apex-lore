@@ -14,7 +14,7 @@ const SidebarMenu = ({ value, icon, to }) => {
     <NavLink to={to} activeClassName="active" className="link">
       <div className="icon-container">
         {icon}
-        <h3>{value}</h3>
+        <h5>{value}</h5>
       </div>
     </NavLink>
   );

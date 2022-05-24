@@ -9,6 +9,7 @@ import Login from "./pages/auth/Login";
 import Signup from "./pages/auth/Signup";
 import Layout from "./layout/Layout";
 import MockmanEs from "mockman-js";
+import Video from "./pages/videopage/Video";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/history" element={<History />} />
           <Route path="/mockman" element={<MockmanEs/>}/>
+          <Route path = "/video/:videoId" element={<Video/>}/>
         </Routes>
       </Layout>
     </div>

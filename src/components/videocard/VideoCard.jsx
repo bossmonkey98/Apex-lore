@@ -2,9 +2,13 @@ import React, { useState } from "react";
 import "./VideoCard.css";
 import { timeSince, toTimestamp } from "../../utils";
 import { PlayArrow } from "@material-ui/icons";
+import {Link, useNavigate} from 'react-router-dom'
+import { useAuth } from "../../Context/AuthContext";
 
 const VideoCard = ({ videos }) => {
+  const {user} = useAuth()
   const [bool, setBool] = useState(false);
+  const navigator = useNavigate()
   return (
     <div className="vertical-card">
       <div
@@ -19,9 +23,9 @@ const VideoCard = ({ videos }) => {
         />
         {bool && (
           <div className="play-btn">
-            <div className="play-btn-bg">
+            <Link to={`/video/${videos._id}`} className="play-btn-bg">
               <PlayArrow fontSize="large" />
-            </div>
+            </Link>
           </div>
         )}
       </div>
