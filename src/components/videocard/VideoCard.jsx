@@ -4,11 +4,13 @@ import { timeSince, toTimestamp } from "../../utils";
 import { PlayArrow } from "@material-ui/icons";
 import {Link, useNavigate} from 'react-router-dom'
 import { useAuth } from "../../Context/AuthContext";
+import { useHistory } from "../../Context/History-context";
 
 const VideoCard = ({ videos }) => {
   const {user} = useAuth()
   const [bool, setBool] = useState(false);
   const navigator = useNavigate()
+  const {history ,AddToHistory, RemoveFromHistory} = useHistory()
   return (
     <div className="vertical-card">
       <div
@@ -24,7 +26,20 @@ const VideoCard = ({ videos }) => {
         {bool && (
           <div className="play-btn">
             <Link to={`/video/${videos._id}`} className="play-btn-bg">
-              <PlayArrow fontSize="large" />
+              <PlayArrow fontSize="large" onClick={()=>{
+                if(user.isUserLoggedIn){
+                  if(history.find((vid)=>vid._id === videos._id)){
+                  RemoveFromHistory(videos._id,user)
+                  setTimeout(()=>AddToHistory(videos,user),1000)
+                }
+                else
+                  AddToHistory(videos,user)
+              }
+                else{
+                  alert("please Login to continue")
+                  navigator("/login")
+                }
+              }}/>
             </Link>
           </div>
         )}
@@ -43,8 +58,6 @@ const VideoCard = ({ videos }) => {
           </div>
           <div className="creator-name">{videos.creator}</div>
         </div>
-        <button className="btn">Watch Later</button>
-        <button className="btn">Add to Playlist</button>
       </div>
     </div>
   );

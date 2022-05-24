@@ -28,7 +28,7 @@
 }
 
 .icon-container:hover {
-  background-color: var(--CTA-bgc);
+  background-color: var(--bgc);
 }
 
 .link {

@@ -2,5 +2,28 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    margin: 1rem 0;
+    margin: 1rem;
 }
+
+.clr-btn{
+    position:fixed;
+    right: 0;
+    top:7rem;
+    cursor: pointer;
+    width: 8rem;
+    height: 2rem;
+    margin: 0 3rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--CTA-bgc);
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.clr-btn:hover {
+    background-color: var(--CTA-hover-bgc);
+    border: 1px solid var(--logo-color);
+    transform: scale(1.05);
+    transition: 0.11s ease-in-out;
+    color: var(--secondary-color);
+  }
