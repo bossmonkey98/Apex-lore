@@ -11,7 +11,7 @@ import Layout from "./layout/Layout";
 import MockmanEs from "mockman-js";
 import Video from "./pages/videopage/Video";
 import PlaylistVideo from "./pages/playlistVideo/PlaylistVideo";
-import Error404 from "./pages/Error404";
+import Error404 from "./pages/Error404/Error404";
 function App() {
   return (
     <div className="App">
