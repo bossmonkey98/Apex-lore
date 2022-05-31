@@ -1,18 +1,19 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { usePlaylist } from '../../Context/playlist-context'
 import "./Playlistmodal.css"
 
 const CreatePlaylist = ({playlistVid})=>{
     const {playlist ,newPlaylist,addToPlaylist} = usePlaylist()
     const [playlistData,setPlaylistData] = useState({name:"",description:""})
-    
+    let z=0
+    console.log(z+1)
     return(
     <div className="modal-content">
         <div className='playlist'>
             <h4>PLaylists</h4>
-         {playlist?<>{ playlist.length !==0 && 
+            {playlist?<>{playlist.length !==0 &&
             playlist.map((i)=>(<span className='list' key={i.id} onClick={()=>addToPlaylist(i._id,playlistVid)}>
-            {i.name}</span>))}</>:<p></p>}
+            {i.name}</span>))}</>:<p>{console.log("hmm")}</p>}
         </div>
         <form action="submit" onSubmit={(e)=>{e.preventDefault();
         if(playlistData.name.length !==0 && playlistData.description.length !==0 ){
