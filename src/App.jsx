@@ -11,6 +11,7 @@ import Layout from "./layout/Layout";
 import MockmanEs from "mockman-js";
 import Video from "./pages/videopage/Video";
 import PlaylistVideo from "./pages/playlistVideo/PlaylistVideo";
+import Error404 from "./pages/Error404/Error404";
 function App() {
   return (
     <div className="App">
@@ -27,6 +28,7 @@ function App() {
           <Route path="/mockman" element={<MockmanEs/>}/>
           <Route path = "/video/:videoId" element={<Video/>}/>
           <Route path = "/playlist/:playlistId" element={<PlaylistVideo/>}/>
+          <Route path = "*" element ={<Error404/>}/>
         </Routes>
       </Layout>
     </div>
