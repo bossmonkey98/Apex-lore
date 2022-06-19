@@ -3,7 +3,7 @@ import "./Navbar.css";
 import logo from "../../assets/logo/logo.png";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../Context/AuthContext";
-import { LogoutHandler } from "../../authHandllers/logHandller";
+import { LogoutHandler } from "../../services/authHandllers/logHandller";
 
 const Navbar = () => {
   const { user, setUser } = useAuth();

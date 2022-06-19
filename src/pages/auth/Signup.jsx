@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import "./auth.css";
 import { Link, useNavigate } from "react-router-dom";
-import { SignUpHandler } from "../../authHandllers/signupHandller";
+import { SignUpHandler } from "../../services/authHandllers/signupHandller";
 
 export default function Signup() {
+  const navigator = useNavigate()
   const [SignInUser, setSignInUser] = useState({
     firstName: "",
     lastName: "",
@@ -13,13 +14,12 @@ export default function Signup() {
   return (
     <div id="log-wrapper">
       <div id="form-container">
-        <form className="form">
+        <form className="form" onSubmit={(e) => {
+              e.preventDefault();
+              SignUpHandler(SignInUser,navigator);
+            }}>
           <h1
             className="form-heading"
-            onSubmit={(e) => {
-              e.preventDefault();
-              SignUpHandler(SignInUser);
-            }}
           >
             APEX LORE / SIGN UP
           </h1>
@@ -59,7 +59,7 @@ export default function Signup() {
               setSignInUser({ ...SignInUser, password: e.target.value })
             }
           />
-          <button className="btn" style={{ width: "13rem" }}>
+          <button className="btn" style={{ width: "13rem" }} type="submit">
             Sign Up
           </button>
           <p>Already have an account?</p>

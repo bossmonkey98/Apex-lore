@@ -1,8 +1,8 @@
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export const SignUpHandler = async (
-  { firstName, lastName, email, password },
-  navigator
+  { firstName, lastName, email, password },navigator
 ) => {
   try {
     const { data } = await axios.post(`/api/auth/signup`, {
