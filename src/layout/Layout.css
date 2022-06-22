@@ -1,19 +1,18 @@
 .page-layout {
-  display: flex;
   width: 100%;
+  position: fixed;
+  top: 5.3rem;
+  display: flex;
+  height: 89vh;
 }
 
-.menu {
-  width: 89vw;
-  flex: 8;
-  position: absolute;
-  left: 10rem;
-  top: 5.5rem;
-  min-height: fit-content;
+.ss{
+  flex: 1;
+
 }
-@media screen and (max-width: 1000px) {
-  .menu{
-    width:75vw;
-    display: flex;
-  }
+.menu {
+  min-height: fit-content;
+  overflow-y:scroll;
+  flex: 9;
+  padding: 1rem;
 }

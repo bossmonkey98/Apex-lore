@@ -1,8 +1,6 @@
 .liked-vids{
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
-    margin: 1rem;
 }
 
 .clr-btn{

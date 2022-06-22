@@ -2,7 +2,7 @@
   width: 320px;
   height: fit-content;
   background-color: var(--card-bgc);
-  margin: 10px 0px;
+  margin: 10px 5px;
   padding: 0 0 5px 0;
 }
 .vertical-card:hover {

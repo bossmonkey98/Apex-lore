@@ -8,7 +8,7 @@ const Home = () => {
   const { video } = useVideo();
   const [catagory, setCatagory] = useState("All");
   return (
-    <div style={{ margin: "1rem" }}>
+    <div>
       <div className="chips">
         <button
           className={catagory === "All" ? "chip-btn-visited" : "chip-btn"}

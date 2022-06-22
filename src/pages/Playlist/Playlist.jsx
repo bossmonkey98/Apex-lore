@@ -4,7 +4,7 @@ import { usePlaylist } from "../../Context/playlist-context";
 const Playlist = () => {
   const {playlist ,newPlaylist,removePlaylist,getSpeciPlaylist,addToPlaylist,removeFromPlaylist} = usePlaylist();
   return <div className="playlist-container">
-    {playlist?<PlaylistCard key={playlist._id}/>:<>No playlist found</>}
+    {playlist.length !==0 ?<PlaylistCard key={playlist._id}/>:<>No playlist found</>}
   </div>;
 };
 

@@ -11,7 +11,7 @@
 .video{
     width:100%;
     height:80vh;
-    padding: 1.2rem;
+    padding: 1rem;
 }
 
 .video-data{
@@ -47,7 +47,7 @@
     width: 40%;
     display: flex;
     flex-direction: column;
-    row-gap: 8px;
+    row-gap:1rem;
     justify-content: space-between;
   }
 
@@ -95,4 +95,8 @@
       color: var(--CTA-bgc);
       transform: scale(1.3);
       transition: 100ms ease-in-out;
+  }
+
+  .desc{
+    margin: 10px 0;
   }

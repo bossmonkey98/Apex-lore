@@ -2,12 +2,12 @@ import axios from "axios";
 
 export const getPlaylist = async (token) => {
   try {
-    const res = await axios.get("/api/user/playlists", {
+    const {data} = await axios.get("/api/user/playlists", {
       headers: {
         authorization: token,
       },
     });
-    return res;
+    return data;
   } catch (err) {
     console.log(err);
   }

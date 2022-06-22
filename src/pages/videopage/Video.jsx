@@ -4,7 +4,7 @@ import { useVideo } from '../../Context/video-context';
 import {Loader} from '../../components/loader/Loader';
 import { timeSince ,toTimestamp } from '../../utils';
 import "./Video.css"
-import { PlaylistAdd, ThumbDown, ThumbUp, ThumbUpOutlined, WatchLater } from '@material-ui/icons';
+import { PlaylistAdd, ThumbUp, ThumbUpOutlined, WatchLater } from '@material-ui/icons';
 import { useLikedVideos } from '../../Context/LikedVideosContext';
 import { useAuth } from '../../Context/AuthContext';
 import { useWatchLater } from '../../Context/watchlater-context';
@@ -50,7 +50,6 @@ const Video = () => {
               navigator("/login")
             }
           }}/>}
-          <ThumbDown  className='icon' fontSize='large'/>
           <PlaylistAdd className='icon' fontSize='large'/>
           <WatchLater className='icon' fontSize='large' onClick={()=>{
             if(watchlater.find((vid)=>vid._id === singleVideo._id)){
