@@ -11,7 +11,7 @@
 }
 .img-container {
   position: relative;
-  width: 320px;
+  width:100%;
   min-height: 200px;
   overflow: hidden;
 }
@@ -40,10 +40,11 @@
   border: 1px solid var(--CTA-bgc);
 }
 
-.play-btn-bg:hover {
+.play-btn-bg:hover ,.card-badge:hover {
   background-color: var(--CTA-bgc);
   transform: scale(1.1);
   transition: 0.1s ease-in;
+  cursor: pointer;
 }
 
 .xs-img-avatar {
@@ -96,4 +97,15 @@
   display: flex;
   font-size: smaller;
   justify-content: space-between;
+}
+
+.card-badge{
+  left:92.5%;
+  font-size: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: grid;
+  place-content: center;
+  background-color:inherit;
+  border-radius:0;
 }

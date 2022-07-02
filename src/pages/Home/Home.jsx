@@ -72,7 +72,7 @@ const Home = () => {
               <VideoCard key={videos.id} videos={videos} />
             ))}
           </>
-        )}
+          )}
       </div>
     </div>
   );

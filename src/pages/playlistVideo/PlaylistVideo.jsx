@@ -8,7 +8,7 @@ const PlaylistVideo = () => {
   return (
     specificPlaylistVideos ? <>
       {specificPlaylistVideos.map(
-        (videos) => <VideoCard videos={videos} />
+        (videos) => <VideoCard videos={videos} showbtn={true} id={playlistId} />
       )}
     </> :
       <div>NO videos found</div>

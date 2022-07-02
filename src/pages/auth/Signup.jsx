@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import "./auth.css";
 import { Link, useNavigate } from "react-router-dom";
 import { SignUpHandler } from "../../services/authHandllers/signupHandller";
+import { useAuth } from "../../Context/AuthContext";
 
 export default function Signup() {
+  const {setUser} = useAuth()
   const navigator = useNavigate()
   const [SignInUser, setSignInUser] = useState({
     firstName: "",
@@ -16,7 +18,7 @@ export default function Signup() {
       <div id="form-container">
         <form className="form" onSubmit={(e) => {
               e.preventDefault();
-              SignUpHandler(SignInUser,navigator);
+              SignUpHandler(SignInUser,navigator,setUser);
             }}>
           <h1
             className="form-heading"

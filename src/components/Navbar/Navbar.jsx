@@ -14,10 +14,6 @@ const Navbar = () => {
           <img src={logo} alt="Logo" className="logo" />
           <h1 className="logo-txt">pex-Lore</h1>
         </div>
-        <div className="searchbar">
-          <Search className="search" />
-          <input type="text" className="query" placeholder="Enter text here" />
-        </div>
         <div className="auth">
           {!user.isUserLoggedIn ? (
             <Link to="/login">
