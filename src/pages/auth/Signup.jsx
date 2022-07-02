@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./auth.css";
+import { TextField } from "@material-ui/core";
 import { Link, useNavigate } from "react-router-dom";
 import { SignUpHandler } from "../../services/authHandllers/signupHandller";
 import { useAuth } from "../../Context/AuthContext";
@@ -14,8 +15,7 @@ export default function Signup() {
     password: "",
   });
   return (
-    <div id="log-wrapper">
-      <div id="form-container">
+      <div className="form-cont">
         <form className="form" onSubmit={(e) => {
               e.preventDefault();
               SignUpHandler(SignInUser,navigator,setUser);
@@ -23,39 +23,45 @@ export default function Signup() {
           <h1
             className="form-heading"
           >
-            APEX LORE / SIGN UP
+            SIGN UP
           </h1>
-          <input
+          <TextField
             className="query"
-            type="text"
-            name="Name"
+            variant="outlined"
+            size="small"
+            fullWidth
             placeholder="Enter Your First Name"
             onChange={(e) =>
               setSignInUser({ ...SignInUser, firstName: e.target.val })
             }
           />
-          <input
+          <TextField
             className="query"
-            type="text"
-            name="LastName"
+            variant="outlined"
+            fullWidth
+            size="small"
             placeholder="Enter Your Last Name"
             onChange={(e) =>
               setSignInUser({ ...SignInUser, lastName: e.target.value })
             }
           />
-          <input
+          <TextField
             className="query"
             type="email"
-            name="email"
+            variant="outlined"
+            fullWidth
+            size="small"
             placeholder="Enter Your E-mail"
             onChange={(e) =>
               setSignInUser({ ...SignInUser, email: e.target.value })
             }
           />
-          <input
+          <TextField
             className="query"
             type="password"
-            name="password"
+            variant="outlined"
+            fullWidth
+            size="small"
             placeholder="Enter Password"
             onChange={(e) =>
               setSignInUser({ ...SignInUser, password: e.target.value })
@@ -65,11 +71,10 @@ export default function Signup() {
             Sign Up
           </button>
           <p>Already have an account?</p>
-          <Link to="/login">
-            <button className="sign-btn">Login</button>
+          <Link to="/login" style={{color:'inherit'}}>
+            Login
           </Link>
         </form>
       </div>
-    </div>
   );
 }
