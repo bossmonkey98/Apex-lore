@@ -10,15 +10,16 @@ import Playlistmodal from "../playlistmodal/Playlistmodal";
 import { usePlaylist } from "../../Context/playlist-context";
 import { useLikedVideos } from "../../Context/LikedVideosContext";
 
-const VideoCard = ({ videos }) => {
+const VideoCard = ({ videos,showbtn,id,likedVideo}) => {
   const {user} = useAuth()
   const [bool, setBool] = useState(false);
   const navigator = useNavigate()
   const {history ,AddToHistory, RemoveFromHistory} = useHistory()
   const {watchlater,AddTowatchlater,RemoveFromwatchlater} = useWatchLater()
-  const {playlist ,newPlaylist,removePlaylist,getSpeciPlaylist,addToPlaylist,removeFromPlaylist} =usePlaylist()
   const [showModal ,setShowModal] = useState(false)
-  const [playlistVid ,setPlaylistVid] =useState()
+  const [playlistVid, setPlaylistVid] = useState()
+  const { removeFromPlaylist } = usePlaylist()
+  const {RemoveLikedVideos} = useLikedVideos()
   return (
     <div className="vertical-card">
       <div
@@ -80,6 +81,18 @@ const VideoCard = ({ videos }) => {
         <button className="btn" onClick={()=>{setShowModal(true);setPlaylistVid(videos)}}>Add to Playlist</button>
         {showModal && <Playlistmodal   functions ={[showModal ,setShowModal ,playlistVid ,setPlaylistVid]}/>}
       </div>
+      {showbtn &&
+        <span className="card-badge" onClick={() => {
+          if (id) {
+            removeFromPlaylist(id,videos._id)
+          }
+          if(likedVideo){
+            RemoveLikedVideos(videos._id)
+          }
+            RemoveFromHistory(videos._id)
+        }}>
+          &times;
+        </span>}
     </div>
   );
 };

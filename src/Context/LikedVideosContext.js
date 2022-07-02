@@ -6,9 +6,8 @@ import { useAuth } from "./AuthContext";
 
 const LikedVideosContext = createContext()
 const useLikedVideos = ()=>useContext(LikedVideosContext)
-
 const LikedVideosProvider =({children})=>{
-    const {user} = useAuth()
+    const { user } = useAuth()
     const [LikedVideos , setLikedVideos] = useState([])
     useEffect(()=>{
         if(user.isUserLoggedIn){
@@ -27,7 +26,7 @@ const LikedVideosProvider =({children})=>{
         if(video)
         setLikedVideos(video.likes)
     }
-    const RemoveLikedVideos = async(id ,user)=>{
+    const RemoveLikedVideos = async(id)=>{
         const removeVideos = await removeFromLikedVideos(id,user)
         if(removeVideos)
         setLikedVideos(removeVideos.likes)

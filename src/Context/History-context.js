@@ -26,14 +26,14 @@ const HistoryProvider = ({children})=>{
         if(video)
         sethistory(video.history)
     }
-    const RemoveFromHistory = async(id ,user)=>{
+    const RemoveFromHistory = async(id)=>{
         const removeVideos = await removeHistory(id,user)
         if(removeVideos)
         sethistory(removeVideos.history)
     }
     const clearHistory = async()=>{
         const clear = await clearAll(user)
-         await sethistory(clear.history)
+        sethistory(clear.history)
     }
     return(
     <HistoryContext.Provider value={{history,AddToHistory,RemoveFromHistory,clearHistory}}>

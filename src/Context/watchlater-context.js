@@ -24,7 +24,6 @@ const WatchLaterProvider = ({children})=>{
         const video = await addWatchLater(videos,user)
         if(video)
         setwatchlater(video.watchlater)
-        await console.log(video)
     }
     const RemoveFromwatchlater = async(id ,user)=>{
         const removeVideos = await removeWatchLater(id,user)

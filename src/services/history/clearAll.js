@@ -9,7 +9,6 @@ export const clearAll =async(user)=>{
               headers: { authorization: user.tokenVal },
             }
           )
-            console.log(data)
         return data
     }
     catch(error){

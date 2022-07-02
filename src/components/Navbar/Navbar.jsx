@@ -3,7 +3,7 @@ import "./Navbar.css";
 import logo from "../../assets/logo/logo.png";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../Context/AuthContext";
-import { LogoutHandler } from "../../authHandllers/logHandller";
+import { LogoutHandler } from "../../services/authHandllers/logHandller";
 
 const Navbar = () => {
   const { user, setUser } = useAuth();
@@ -13,10 +13,6 @@ const Navbar = () => {
         <div className="app-logo">
           <img src={logo} alt="Logo" className="logo" />
           <h1 className="logo-txt">pex-Lore</h1>
-        </div>
-        <div className="searchbar">
-          <Search className="search" />
-          <input type="text" className="query" placeholder="Enter text here" />
         </div>
         <div className="auth">
           {!user.isUserLoggedIn ? (

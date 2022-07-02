@@ -12,7 +12,7 @@ const usePlaylist = ()=>useContext(PlaylistContext)
 const PlaylistProvider =({children})=>{
     const {user} = useAuth()
     const [playlist , setPlaylist] = useState([])
-    const [playlistVideos ,setPlaylistVideos] =useState([])
+    const [specificPlaylistVideos ,setSpecificPlaylistVideos] =useState()
     useEffect(()=>{
         if(user.isUserLoggedIn){
             (async()=>{
@@ -29,8 +29,8 @@ const PlaylistProvider =({children})=>{
     const getSpeciPlaylist = async(playlistId)=>{
         const data = await getSpecificPlaylist(playlistId,user.tokenVal)
         if(data)
-        setPlaylistVideos(data.playlists)
-        console.log(await data.playlist)
+            setSpecificPlaylistVideos(data.playlist.videos)
+
     }
 
     const newPlaylist = async(playlistData)=>{
@@ -46,10 +46,11 @@ const PlaylistProvider =({children})=>{
     }
 
     const addToPlaylist = async(playlistid,video)=>{
-        const data = await addVideoToPlaylist(playlistid,video,user.tokenVal)
-        if(data){
-        setPlaylist(await data.playlists)
-    }}
+        const data = await addVideoToPlaylist(playlistid, video, user.tokenVal)
+        const info = await getPlaylist(user.tokenVal)
+        if (info)
+            setPlaylist(info.playlists)
+    }
 
     const removeFromPlaylist = async(playlistid,videoid)=>{
         const data = await removeVideoFromPlaylist(playlistid,videoid,user.tokenVal)
@@ -58,7 +59,7 @@ const PlaylistProvider =({children})=>{
     }
     
     return(
-    <PlaylistContext.Provider value={{playlist,newPlaylist,removePlaylist,getSpeciPlaylist,addToPlaylist,removeFromPlaylist}}>
+    <PlaylistContext.Provider value={{specificPlaylistVideos,playlist,newPlaylist,removePlaylist,getSpeciPlaylist,addToPlaylist,removeFromPlaylist}}>
         {children}
     </PlaylistContext.Provider>
 )

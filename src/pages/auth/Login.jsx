@@ -1,7 +1,8 @@
+import { TextField } from "@material-ui/core";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../Context/AuthContext";
-import { LogInHandler } from "../../authHandllers/logHandller";
+import { LogInHandler } from "../../services/authHandllers/logHandller";
 import "./auth.css";
 
 const Login = () => {
@@ -13,58 +14,62 @@ const Login = () => {
   };
   const navigator = useNavigate();
   return (
-    <div id="log-wrapper">
-      <div id="form-container">
-        <form
-          className="form"
-          onSubmit={(e) => {
-            e.preventDefault();
-            LogInHandler(loguser, setUser, navigator);
-          }}
-        >
-          <h1 className="form-heading">APEX LORE / LOGIN</h1>
-          <input
-            className="query"
-            type="text"
-            name="username"
-            placeholder="Enter Email"
-            onChange={(e) => setLoguser({ ...loguser, email: e.target.value })}
-          />
-          <input
-            className="query"
-            type="password"
-            name="password"
-            placeholder="Enter Password"
-            onChange={(e) => setLoguser({ ...loguser, password: e.target.value })}
-          />
-          <p className="log-cred" style={{ cursor: "context-menu" }}>
-            <span>
-              <input type="radio" />
-              Remember me
-            </span>
-          </p>
-          <div className="log-btn">
-            <button className="btn" type="submit">
-              Login
-            </button>
-            <button
-              className="btn"
-              onClick={(e) => {
-                e.preventDefault();
-                LogInHandler(guestUser, setUser, navigator);
-              }}
-            >
-              Login as Guest
-            </button>
-          </div>
+    <div className="form-cont">
+      <form
+        className="form"
+        onSubmit={(e) => {
+          e.preventDefault();
+          LogInHandler(loguser, setUser, navigator);
+        }}
+      >
+        <h1 className="form-heading">LOGIN</h1>
+        <TextField
+          className="query"
+          placeholder="Enter Email"
+          variant="outlined"
+          fullWidth
+          size="small"
+          onChange={(e) => setLoguser({ ...loguser, email: e.target.value })}
+        />
+        <TextField
+          className="query"
+          type="password"
+          variant="outlined"
+          placeholder="Enter Password"
+          fullWidth
+          size="small"
+          onChange={(e) => setLoguser({ ...loguser, password: e.target.value })}
+        />
+        <p className="log-cred" style={{ cursor: "context-menu" }}>
+          <span>
+            <input type="radio" />
+            Remember me
+          </span>
+        </p>
+        <div className="log-btn">
+          <button className="btn" type="submit">
+            Login
+          </button>
+          <button
+            className="btn"
+            onClick={(e) => {
+              e.preventDefault();
+              LogInHandler(guestUser, setUser, navigator);
+            }}
+          >
+            Login as Guest
+          </button>
+        </div>
+        <div>
+          No Account?
           <Link
             to="/signup"
-            style={{ textDecoration: "none", alignSelf: "center" }}
+            style={{color:'inherit'}}
           >
-            <button className="sign-btn">No Account? Create One</button>
+            Create One
           </Link>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
   );
 };
