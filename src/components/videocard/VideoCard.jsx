@@ -10,7 +10,7 @@ import Playlistmodal from "../playlistmodal/Playlistmodal";
 import { usePlaylist } from "../../Context/playlist-context";
 import { useLikedVideos } from "../../Context/LikedVideosContext";
 
-const VideoCard = ({ videos,showbtn,id,likedVideo}) => {
+const VideoCard = ({ videos,showbtn,id,likedVideo,inhistory}) => {
   const {user} = useAuth()
   const [bool, setBool] = useState(false);
   const navigator = useNavigate()
@@ -89,6 +89,7 @@ const VideoCard = ({ videos,showbtn,id,likedVideo}) => {
           if(likedVideo){
             RemoveLikedVideos(videos._id)
           }
+          if(inhistory)
             RemoveFromHistory(videos._id)
         }}>
           &times;
