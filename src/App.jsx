@@ -26,7 +26,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/history" element={<History />} />
-          <Route path="/video/:videoId" element={<PrivateRoute PrivateItem={<Video />} />} />
+          <Route path="/video/:videoId" element={<Video />} />
           <Route path="/playlist/:playlistId" element={<PrivateRoute PrivateItem={<PlaylistVideo />} />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
