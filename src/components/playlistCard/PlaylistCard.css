@@ -2,21 +2,19 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    gap: 5px;
 }
 
 #file{
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
 .playlist-file{
-    width:10rem;
-    width: fit-content;
-    font-size: larger;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 1.5rem;
     overflow:hidden;
     text-decoration: none;
     color: var(--logo-color);
@@ -26,4 +24,24 @@
     transform: scale(1.1);
     transition: 100ms ease-in-out;
     color: var(--CTA-bgc);
+}
+
+.playlist-cont{
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.playlist-cont>.btn{
+    margin-top: 0;
+}
+
+.file-name{
+    height: 1.3rem;
+    width: 90%;
+    text-align: center;
+    overflow: hidden;
 }

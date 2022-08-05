@@ -24,7 +24,7 @@ root.render(
             <HistoryProvider>
               <WatchLaterProvider>
                 <PlaylistProvider>
-                    <App />
+                  <App />
                 </PlaylistProvider>
               </WatchLaterProvider>
             </HistoryProvider>

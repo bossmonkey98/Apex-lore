@@ -1,13 +1,10 @@
-* {
-  box-sizing: border-box;
-}
 
 .loader {
   width: 100px;
   height: 150px;
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 55%;
   transform: translate(-50%, -50%);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
