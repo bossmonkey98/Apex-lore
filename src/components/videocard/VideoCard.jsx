@@ -12,7 +12,7 @@ import { useLikedVideos } from "../../Context/LikedVideosContext";
 import { useModal } from "../../Context/modalContext";
 import { Tooltip } from "@material-ui/core";
 
-const VideoCard = ({ videos, showbtn, id, likedVideo, inhistory ,title}) => {
+const VideoCard = ({ videos, showbtn, id, likedVideo, inhistory, title }) => {
   const { user } = useAuth()
   const [bool, setBool] = useState(false);
   const navigator = useNavigate()
@@ -38,17 +38,12 @@ const VideoCard = ({ videos, showbtn, id, likedVideo, inhistory ,title}) => {
           <div className="play-btn">
             <Link to={`/video/${videos._id}`} className="play-btn-bg">
               <PlayArrow fontSize="large" onClick={() => {
-                if (user.isUserLoggedIn) {
-                  if (history.find((vid) => vid._id === videos._id)) {
-                    RemoveFromHistory(videos._id, user)
-                    setTimeout(() => AddToHistory(videos, user), 1000)
-                  }
-                  else
-                    AddToHistory(videos, user)
+                if (history.find((vid) => vid._id === videos._id)) {
+                  RemoveFromHistory(videos._id, user)
+                  setTimeout(() => AddToHistory(videos, user), 1000)
                 }
                 else {
-                  alert("please Login to continue")
-                  navigator("/login")
+                  AddToHistory(videos, user)
                 }
               }} />
             </Link>
@@ -70,7 +65,11 @@ const VideoCard = ({ videos, showbtn, id, likedVideo, inhistory ,title}) => {
           <div className="creator-name">{videos.creator}</div>
         </div>
         {watchlater.find((vid) => vid._id === videos._id) ?
-          <button className="btn" onClick={() => RemoveFromwatchlater(videos._id, user)}>Remove from watchlater</button>
+          <button className="btn"
+            onClick={() =>
+              RemoveFromwatchlater(videos._id, user)
+            }>Remove from watchlater
+          </button>
           : <button className="btn" onClick={() => {
             if (user.isUserLoggedIn) {
               AddTowatchlater(videos, user)
@@ -79,7 +78,7 @@ const VideoCard = ({ videos, showbtn, id, likedVideo, inhistory ,title}) => {
               alert("Please login to continue")
               navigator("/login")
             }
-          }}>Add to watchlater</button>}
+          }}>Add to Watch Later</button>}
         {
           !id &&
           <button className="btn" onClick={() => {
@@ -100,20 +99,20 @@ const VideoCard = ({ videos, showbtn, id, likedVideo, inhistory ,title}) => {
         />}
       </div>
       {showbtn &&
-        <Tooltip title= {title}>
-        <span className="card-badge" onClick={() => {
-          if (id) {
-            removeFromPlaylist(id, videos._id)
-          }
-          if (likedVideo) {
-            RemoveLikedVideos(videos._id)
-          }
-          if (inhistory)
-            RemoveFromHistory(videos._id)
-        }}>
-          &times;
+        <Tooltip title={title}>
+          <span className="card-badge" onClick={() => {
+            if (id) {
+              removeFromPlaylist(id, videos._id)
+            }
+            if (likedVideo) {
+              RemoveLikedVideos(videos._id)
+            }
+            if (inhistory)
+              RemoveFromHistory(videos._id)
+          }}>
+            &times;
           </span>
-          </Tooltip>}
+        </Tooltip>}
     </div>
   );
 };
