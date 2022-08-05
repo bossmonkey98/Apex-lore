@@ -1,3 +1,4 @@
+import { Tooltip } from "@material-ui/core";
 import {
   Favorite,
   History,
@@ -9,35 +10,45 @@ import {
 import { NavLink } from "react-router-dom";
 import "./Sidebar.css";
 
-const SidebarMenu = ({ icon, to }) => {
+const SidebarMenu = ({ icon, to, title }) => {
   return (
-    <NavLink to={to} activeClassName="active" className="link">
-      <div className="icon-container">
+    <Tooltip title={title}
+      className="icon-container"
+    >
+      <NavLink to={to} activeClassName="active" className="link">
         {icon}
-      </div>
-    </NavLink>
+      </NavLink>
+    </Tooltip>
   );
 };
 
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <SidebarMenu icon={<Home className="icon" />} to="/" />
+      <SidebarMenu
+        icon={<Home className="icon" />}
+        to="/"
+        title='Home'
+      />
       <SidebarMenu
         icon={<PlaylistPlay className="icon" />}
         to="/playlist"
+        title='Playlist'
       />
       <SidebarMenu
         icon={<Favorite className="icon" />}
         to="/liked-videos"
+        title='Liked Videos'
       />
       <SidebarMenu
         icon={<WatchLater className="icon" />}
         to="/watchlater"
+        title='Watchlater'
       />
       <SidebarMenu
         icon={<History className="icon" />}
         to="/history "
+        title='History'
       />
     </div>
   );
