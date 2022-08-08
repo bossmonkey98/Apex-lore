@@ -5,12 +5,15 @@ const Playlist = () => {
   const { playlist } = usePlaylist();
 
   return (
-    <div className="playlist-container">
-      {playlist.length !== 0 ?
-        <PlaylistCard key={playlist._id} /> :
-        <>
-          No playlist found
-        </>}
+    <div>
+      <h1>Playlist</h1>
+      <div className="playlist-container">
+        {playlist.length !== 0 ?
+          <PlaylistCard key={playlist._id} /> :
+          <h3>
+            No playlist found
+          </h3>}
+      </div>
     </div>
   )
 };
